@@ -1,6 +1,3 @@
-	extern      printf
-	extern      scanf
-
 section .data
 	msg 	    db "Enter a number to loop to: ", 0
     	msg2        db "Looping until %d", 10, 0
@@ -14,8 +11,11 @@ section .bss
 	buf 	    resb 0x10
 
 section .text
-	global 	    main
+	global	    main
     	global      FIZZBUZZ
+	extern	    printf
+	extern      scanf
+
 
 main:
 	push 	ebp
