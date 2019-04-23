@@ -16,7 +16,6 @@ section .text
 	extern	    printf
 	extern      scanf
 
-
 main:
 	push 	ebp
 	mov 	ebp, esp
