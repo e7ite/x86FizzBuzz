@@ -1,25 +1,25 @@
-		extern		printf
-		extern		scanf
+extern      printf
+extern      scanf
 
 section .data
-		msg 	    db "Enter a number to loop to: ", 0
-    msg2      db "Looping until %d", 10, 0
-		scanFmt	  db "%d", 0
-    fmt       db "%d", 10, 0
-		buzz      db "buzz", 10, 0
-    fizz      db "fizz", 10, 0
-    both      db "fizzbuzz", 10, 0
+	msg 	    db "Enter a number to loop to: ", 0
+    msg2        db "Looping until %d", 10, 0
+	scanFmt	    db "%d", 0
+    fmt         db "%d", 10, 0
+    fizz        db "fizz", 10, 0
+    buzz        db "buzz", 10, 0
+    both        db "fizzbuzz", 10, 0
 
 section .bss
-		buf 	    resb 0x10
+	buf 	    resb 0x10
 
 section .text
-    global		main
-    global    FIZZBUZZ
+    global 	    main
+    global      FIZZBUZZ
 
 main:
-		push 		ebp
-		mov 		ebp, esp
+	push 	ebp
+	mov 	ebp, esp
 
     mov     eax, msg
     push    eax
@@ -32,7 +32,7 @@ main:
     push    ebx
     call    scanf
     add     esp, 8
-
+    
     mov     ebx, msg2
     push    ebx
     call    printf
@@ -43,7 +43,7 @@ main:
     mov     esp, ebp
     pop     ebp
     ret
-
+	
 FIZZBUZZ:
     push    ebp
     mov     ebp, esp
@@ -114,7 +114,7 @@ OUTPUT:
     pop     ecx
     inc     ecx
     jmp     FOR_LOOP_1_TO_N
-
+    
 END:
     mov     esp, ebp
     pop     ebp
