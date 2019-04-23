@@ -11,10 +11,10 @@ section .bss
 	buf 	    resb 0x10
 
 section .text
-	global	    main
-    	global      FIZZBUZZ
 	extern	    printf
 	extern      scanf
+	global	    main
+    	global      FIZZBUZZ
 
 main:
 	push 	ebp
